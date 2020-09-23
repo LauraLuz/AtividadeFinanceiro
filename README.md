@@ -1,2 +1,2 @@
 # AtividadeJavascript2
-Atividade de Validações Javascript
+Atividade de Validações Javascript Responsive Web Development
