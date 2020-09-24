@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Sistema Financeiro</h1>
+
+    <form name="dados" action="dados.html" method="get">
+        <h2>Login</h2>
+        <div>
+            <label for="idUsuario">Usuario</label>
+            <input type="text" id="idUsuario" name="usuario" value=""><br>
+            <span></span>
+        </div>
+        <div>
+            <label for="idSenha">Senha</label>
+            <input type="text" id="idSenha" name="senha" value=""><br>
+            <span></span>
+        </div>
+        <div class="divBtn">
+            <input type="button" name="enviar" value="Enviar">
+        </div>
+    </form>
+    <footer>
+        <!-- validacoes dos campos -->
+        <p><span>Usuario:</span>nao permite caracteres especiais apenas letras e numeros minusculos</p>
+        <p><span>Senha:</span>É preciso conter pelo menos 6 caracteres, incluindo
+            letras maiusculas, numeros e caracteres especiais</p>
+
+    </footer>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
