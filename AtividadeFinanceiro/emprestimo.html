@@ -11,17 +11,17 @@
     <h1>Simulação Empréstimo</h1>
     <form name="dados" action="index.html" method="get">
         <div>
-            <label for="idSalario">Salario Mensal</label>
+            <label for="idSalario">Salário Mensal</label>
             <input type="text" id="idSalario" name="salario" value=""><br>
             <span></span>
         </div>
         <div>
-            <label for="idTempoEmp">Tempo de Empresa</label>
+            <label for="idTempoEmp">Tempo de Empresa (anos)</label>
             <input type="text" id="idTempoEmp" name="tempoemp" value=""><br>
             <span></span>
         </div>
         <div>
-            <label for="idValor">Valor Emprestimo</label><br>
+            <label for="idValor">Valor do Empréstimo</label><br>
             <input type="text" id="idValor" name="valor" value=""><br>
             <span></span>
         </div>
@@ -30,8 +30,11 @@
         </div>
     </form>
     <footer>
-        <p><span>Regras:</span>nao permite caracteres especiais apenas letras e numeros minusculos</p>
-        <p><span>Regras:</span>nao sei </p>
+        <p><span>Regra 1:</span>Se o tempo de serviço for abaixo de 3 anos o empréstimo só poderá
+          ser 70% do salário, se passar de 3 anos o empréstimo poderá ser de 150%.</p>
+        <p><span>Regra 2:</span> Todos os campos devem permitir apenas números
+        e nenhum valor pode ser menor do que 0.</p>
+        <p><span>Regra 3:</span> Tempo de empresa não pode ter mais de 3 dígitos.</p>
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
