@@ -12,18 +12,18 @@
     <form name="dados" action="emprestimo.html" method="get">
         <h2>Dados</h2>
         <div>
-            <label for="idNome">Nome</label>
+            <label for="idNome">Nome Completo</label>
             <input type="text" id="idNome" name="nome" value=""><br>
             <span></span>
         </div>
         <div>
-            <label for="idSobrenome">Sobremone</label>
-            <input type="text" id="idSobrenome" name="sobrenome" value=""><br>
+            <label for="idProfissao">Profissão</label>
+            <input type="text" id="idProfissao" name="profissao" value=""><br>
             <span></span>
         </div>
         <div>
-            <label for="idNasc">Data de Nascimento</label>
-            <input type="text" id="idNasc" name="nasc" value=""><br>
+            <label for="idIdade">Idade</label>
+            <input type="text" id="idIdade" name="idade" value=""><br>
             <span></span>
         </div>
         <div>
@@ -37,14 +37,21 @@
             <span></span>
         </div>
         <div class="divBtn">
-            <input type="button" name="enviar" value="Enviar">
+            <input type="submit" name="enviar" value="Enviar">
         </div>
     </form>
     <footer>
-        <p><span>Regras:</span>nao permite caracteres especiais apenas letras e numeros minusculos</p>
-        <p><span>Regras:</span>nao sei</p>
+        <p><span>Regra 1:</span> Todos os campos devem ser preenchidos.</p>
+        <p><span>Regra 2:</span> Não permite que o usuário informe apenas o primeiro nome.</p>
+        <p><span>Regra 3:</span> Campo de profissão não pode conter mais que 20 caracteres.</p>
+        <p><span>Regra 4:</span> A idade do usuário deve ser superior a 18 anos.
+          Caso o funcionário seja jovem aprendiz ou estagiário (casos em que é permitido contratar menores de idade)
+        ainda não estará apto para solicitar empréstimos.</p>
+        <p><span>Regra 5:</span> Cpf deve possuir todos os dígitos e os caracteres do cpf devem ser ignorados</p>
+        <p><span>Regra 6:</span> Email não pode terminar com arroba ou ponto e o último
+          ponto não pode anteceder o arroba.</p>
     </footer>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/dadosScript.js"></script>
 </body>
 
 </html>
