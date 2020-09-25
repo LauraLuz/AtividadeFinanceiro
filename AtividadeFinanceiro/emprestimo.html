@@ -9,7 +9,7 @@
 
 <body>
     <h1>Simulação Empréstimo</h1>
-    <form name="dados" action="index.html" method="get">
+    <form name="emprestimo" action="index.html" method="get">
         <div>
             <label for="idSalario">Salário Mensal</label>
             <input type="text" id="idSalario" name="salario" value=""><br>
@@ -30,11 +30,12 @@
         </div>
     </form>
     <footer>
-        <p><span>Regra 1:</span>Se o tempo de serviço for abaixo de 3 anos o empréstimo só poderá
+        <p><span>Regra 1:</span> Todos os campos devem ser preenchidos.</p>
+        <p><span>Regra 2:</span>Se o tempo de serviço for abaixo de 3 anos o empréstimo só poderá
           ser 70% do salário, se passar de 3 anos o empréstimo poderá ser de 150%.</p>
-        <p><span>Regra 2:</span> Todos os campos devem permitir apenas números
+        <p><span>Regra 3:</span> Todos os campos devem permitir apenas números
         e nenhum valor pode ser menor do que 0.</p>
-        <p><span>Regra 3:</span> Tempo de empresa não pode ter mais de 3 dígitos.</p>
+        <p><span>Regra 4:</span> Tempo de empresa não pode ter mais de 3 dígitos.</p>
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
