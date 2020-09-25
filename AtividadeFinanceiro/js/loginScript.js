@@ -1,5 +1,5 @@
 document.login.senha.addEventListener('blur', senhaValida)
-function senhaValida(){
+function senhaValida() {
 
   var letrasMaiusculas = /[A-Z]/;
   var letrasMinusculas = /[a-z]/;
@@ -16,53 +16,47 @@ function senhaValida(){
   var resSenha = document.querySelector('#idSenha~span')
   var retorno = 0;
 
-
-
-  for(var i=0; i< senha.length; i++){
-    if(letrasMaiusculas.test(senha[i])){
+  for (var i = 0; i < senha.length; i++) {
+    if (letrasMaiusculas.test(senha[i])) {
       auxMaiuscula++;
-    }else if(letrasMinusculas.test(senha[i])){
+    } else if (letrasMinusculas.test(senha[i])) {
       auxMinuscula++;
-    }else if(numeros.test(senha[i])){
+    } else if (numeros.test(senha[i])) {
       auxNumero++;
-    }else if(caracteresRegulares.test(senha[i])){
+    } else if (caracteresRegulares.test(senha[i])) {
       auxEspecial++;
     }
- }
-//    console.log(auxMaiuscula);
-//    console.log(auxMinuscula);
-//    console.log(auxNumero);
-//    console.log(auxEspecial);
-    var testeGeral = auxMaiuscula + auxMinuscula + auxNumero + auxEspecial;
-//    console.log(document.login.senha.value.length);
-    // Só entra no laço se tamanho da senha for diferente de 0
-    if( document.login.senha.value.length != 0 ){
-      if( senha.length < 6 || testeGeral != 0){
+  }
+  //    console.log(auxMaiuscula);
+  //    console.log(auxMinuscula);
+  //    console.log(auxNumero);
+  //    console.log(auxEspecial);
+  var testeGeral = auxMaiuscula + auxMinuscula + auxNumero + auxEspecial;
+  //    console.log(document.login.senha.value.length);
+  // Só entra no laço se tamanho da senha for diferente de 0
+  if (document.login.senha.value.length != 0) {
+    if (senha.length < 6 || testeGeral != 0) {
 
-        resSenha.innerHTML = "Insira uma senha válida."
-        retorno = 1;
-      }else{
-        resSenha.innerHTML = ""
-        retorno = 0;
-      }
-    }else{
+      resSenha.innerHTML = "Insira uma senha válida."
       retorno = 1;
+    } else {
+      resSenha.innerHTML = ""
+      retorno = 0;
     }
-    return retorno;
+  } else {
+    retorno = 1;
+  }
+  return retorno;
 }
 
-
 console.log(senhaValida());
-
-
-
 
 document.login.enviar.addEventListener('click', validarPedido)
 function validarPedido() {
   var valid = 0
   valid += senhaValida()
 
-  if(valid != 0){
-        event.preventDefault()
-    }
+  if (valid != 0) {
+    event.preventDefault()
+  }
 }
