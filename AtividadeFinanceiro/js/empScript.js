@@ -6,10 +6,10 @@ function validarSalario() {
   var salario = parseFloat(document.emprestimo.salario.value)
   var resSal = document.querySelector('#idSalario~span')
 
-  if(salario <= 0 || isNaN(salario)){
+  if (salario <= 0 || isNaN(salario)) {
     resSal.innerHTML = "Insira uma quantia válida"
     return 1
-  }else{
+  } else {
     resSal.innerHTML = ""
     return 0
   }
@@ -20,10 +20,10 @@ function validarTempo() {
   var tempo = parseFloat(document.emprestimo.tempoemp.value)
   var resTemp = document.querySelector('#idTempoEmp~span')
 
-  if(tempo <= 0 || isNaN(tempo) || tempo > 100){
+  if (tempo <= 0 || isNaN(tempo) || tempo > 100) {
     resTemp.innerHTML = "Insira uma quantia válida"
     return 1
-  }else{
+  } else {
     resTemp.innerHTML = ""
     return 0
   }
@@ -33,11 +33,11 @@ document.emprestimo.valor.addEventListener('blur', validarValor)
 function validarValor() {
   var valor = parseFloat(document.emprestimo.valor.value)
   var resValor = document.querySelector('#idValor~span')
-  if(valor <= 0 || isNaN(valor)){
+  if (valor <= 0 || isNaN(valor)) {
     resValor.innerHTML = "Insira uma quantia válida"
     event.preventDefault('enviar')
     return 1
-  }else{
+  } else {
     resValor.innerHTML = ""
     return 0
   }
@@ -53,23 +53,24 @@ function validarPedido() {
   var salario = parseFloat(document.emprestimo.salario.value)
   var tempo = parseFloat(document.emprestimo.tempoemp.value)
   var valor = parseFloat(document.emprestimo.valor.value)
-  var emprestimo = valor/salario
-  if(valid == 0){
-      if(tempo < 3){
-        if(emprestimo <= 0.7){
-          alert("Pedido enviado para análise!")
-        }else{
-          alert("O valor do empréstimo não pode ser superior a 70% do seu salário")
-        }
-      }else if(tempo => 3){
-          if(emprestimo <= 1.5){
-            alert("Pedido enviado para análise!")
-          }else{
-            alert("O valor do empréstimo não pode ser superior a 150% do seu salário")
-          }
+  var resEmprestimo = document.querySelector('#btnEnviar~span')
+  var emprestimo = valor / salario
+  if (valid == 0) {
+    if (tempo < 3) {
+      if (emprestimo <= 0.7) {
+        resEmprestimo.innerHTML = "Pedido enviado para análise!"
+      } else {
+        resEmprestimo.innerHTML = "O valor do empréstimo não pode ser superior a 70% do seu salário"
       }
-    }else{
-        alert("Preencha todos os campos corretamente!")
+    } else if (tempo => 3) {
+      if (emprestimo <= 1.5) {
+        resEmprestimo.innerHTML = "Pedido enviado para análise!"
+      } else {
+        resEmprestimo.innerHTML = "O valor do empréstimo não pode ser superior a 150% do seu salário"
+      }
     }
+  } else {
+    resEmprestimo.innerHTML = "Preencha todos os campos corretamente!"
+  }
 
 }

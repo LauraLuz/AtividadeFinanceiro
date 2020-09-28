@@ -32,9 +32,13 @@
     </form>
     <footer>
         <!-- validacoes dos campos -->
-        <p><span>Usuario:</span>nao permite caracteres especiais apenas letras e numeros minusculos</p>
-        <p><span>Senha:</span>É preciso conter pelo menos 6 caracteres, incluindo
-            letras maiusculas, numeros e caracteres especiais</p>
+        <p><span>Regra 1:</span> Todos os campos devem ser preenchidos.</p>
+        <p><span>Regra 2:</span> Campo "Usuário" deve começar com os caracteres "CD" (Código), seguidos de 4 caracteres
+            numericos.</p>
+        <p><span>Regra 3:</span> Campo "Senha" deve conter pelo menos 6 caracteres, incluindo
+            letras maiusculas, minusculas, numeros e caracteres especiais: ! @ # $ % & * (Eliminamos do conjunto dos
+            caracteres
+            especiais aqueles que dariam interferencia no código).</p>
 
     </footer>
     <script type="text/javascript" src="js/loginScript.js"></script>
